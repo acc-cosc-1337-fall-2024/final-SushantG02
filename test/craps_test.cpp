@@ -2,6 +2,7 @@
 #include "catch.hpp"
 #include "die.h"
 #include "roll.h"
+#include "shooter.h"
 
 
 TEST_CASE("Verify Test Configuration", "verification") {
@@ -31,6 +32,21 @@ TEST_CASE("Roll values are between 2 and 12")
     {
         roll.rollDice();
         int result = roll.getRollValue();
+        REQUIRE(result >= 2);
+        REQUIRE(result <= 12);
+    }
+}
+
+TEST_CASE("Shooter roll values are between 2 and 12") 
+{
+    Die die1;
+    Die die2;
+    Shooter shooter;
+    for (int i = 0; i < 10; ++i) 
+    {
+        Roll* roll = shooter.throw_dice(die1, die2);
+        int result = roll->getRollValue();
+        
         REQUIRE(result >= 2);
         REQUIRE(result <= 12);
     }
