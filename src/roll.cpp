@@ -12,3 +12,7 @@ int Roll::getRollValue() const
 {
     return rolledValue;
 }
+void Roll::setRollValue(int value) 
+{
+    rolledValue = value;
+}

@@ -9,6 +9,10 @@ public:
     Roll(Die& die1, Die& die2);
     void rollDice();
     int getRollValue() const;
+    void setRollValue(int value);
+    
+   
+   
 
 private:
     Die& die1;

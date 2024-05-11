@@ -1,6 +1,6 @@
 #include "shooter.h"
 #include <iostream>
-
+#include <cassert>
 
 
 Roll* Shooter::throw_dice(Die& die1, Die& die2) 
